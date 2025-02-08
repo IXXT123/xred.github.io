@@ -3,126 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页 - 你的名字</title>
+    <title>小red同学 - AI大模型工程师</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
         body {
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
         }
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 2rem auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        .navbar {
+            background: var(--primary-color);
+        }
+        .profile-header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 3rem 0;
         }
         .timeline {
             position: relative;
-            padding: 20px 0;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            background: #e9ecef;
+            padding-left: 30px;
+            border-left: 2px solid var(--secondary-color);
         }
         .timeline-item {
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 2rem;
         }
-        .timeline-item:nth-child(odd) {
-            padding-right: calc(50% + 30px);
-            text-align: right;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--secondary-color);
         }
-        .timeline-item:nth-child(even) {
-            padding-left: calc(50% + 30px);
-        }
-        .section-title {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5em;
-            margin: 2rem 0;
-        }
-        .social-links a {
-            color: #333;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #3498db;
+        .achievement-badge {
+            background: var(--secondary-color);
+            color: white;
         }
     </style>
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">你的名字</a>
+            <a class="navbar-brand" href="#">小red同学</a>
         </div>
     </nav>
 
-    <!-- 主要内容 -->
-    <div class="container mt-5 pt-4">
-        <!-- 个人简介 -->
-        <section class="text-center">
-            <img src="photo.jpg" alt="个人照片" class="profile-img">
-            <h1>你的名字</h1>
-            <p class="lead">AI大模型工程师 | 小红书科技博主</p>
+    <!-- 个人信息 -->
+    <header class="profile-header">
+        <div class="container text-center">
+            <img src="photo.jpg" alt="头像" class="rounded-circle mb-3" width="150">
+            <h1 class="mb-3">小red同学</h1>
+            <p class="lead text-muted">上海交通大学芯片设计硕士 | AI大模型工程师</p>
             <div class="social-links">
-                <a href="https://www.xiaohongshu.com/user/profile/5cfcfd3e0000000011009029" target="_blank">
-                    <i class="fab fa-weixin"></i> 小红书
+                <a href="https://www.xiaohongshu.com/user/profile/5cfcfd3e0000000011009029" class="btn btn-outline-dark">
+                    <i class="fab fa-weixin"></i> 小红书 (13k粉丝)
                 </a>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <!-- 教育经历 -->
-        <section>
-            <h2 class="section-title">教育背景</h2>
+    <!-- 主要内容 -->
+    <main class="container my-5">
+        <section class="mb-5">
+            <h2 class="mb-4">👨🎓 教育背景</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <h4>上海交通大学</h4>
-                    <p class="text-muted">2021.09 - 2024.06</p>
-                    <p>集成电路工程硕士<br>AI方向发表顶刊1篇，会议论文3篇</p>
+                    <p class="text-muted">芯片设计专业硕士 | 2021.09 - 2024.06</p>
                 </div>
             </div>
         </section>
 
-        <!-- 工作经历 -->
-        <section>
-            <h2 class="section-title">工作经历</h2>
+        <section class="mb-5">
+            <h2 class="mb-4">💼 工作经历</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <h4>腾讯</h4>
-                    <p class="text-muted">2024.08 - 至今</p>
-                    <p>AI大模型工程师</p>
+                    <p class="text-muted">AI大模型工程师（正式） | 2024.08 - 至今</p>
+                    <p>• 负责AI大模型应用</p>
                 </div>
                 <div class="timeline-item">
                     <h4>腾讯</h4>
-                    <p class="text-muted">2024.05 - 2024.07</p>
-                    <p>AI Intern</p>
+                    <p class="text-muted">AI实习生 | 2024.05 - 2024.07</p>
+                    <p>• 负责AI大模型应用</p>
                 </div>
                 <div class="timeline-item">
                     <h4>华为诺亚方舟实验室</h4>
-                    <p class="text-muted">2023.07 - 2024.02</p>
-                    <p>AI Research Intern</p>
-                    
+                    <p class="text-muted">AI Research Intern | 2023.07 - 2024.02</p>
+                    <p>• 从事大模型pretraining算法研究</p>
                 </div>
                 <div class="timeline-item">
                     <h4>Ringconn</h4>
-                    <p class="text-muted">2022.07 - 2023.05</p>
-                    <p>AI Research Intern</p>
-                    <a href="https://ringconn.com" target="_blank">公司官网</a>
+                    <p class="text-muted">AI Research Intern | 2022.07 - 2023.05</p>
+                    <p>• 开发智能穿戴设备AI算法</p>
+                    <p>• 公司官网：<a href="https://ringconn.com" target="_blank">ringconn.com</a></p>
                 </div>
             </div>
         </section>
-    </div>
 
-    <!-- Bootstrap JS -->
+        <section class="mb-5">
+            <h2 class="mb-4">🏆 学术成就</h2>
+            <div class="alert alert-primary">
+                在AI领域累计发表顶刊论文1篇，顶级会议论文3篇
+            
+            </div>
+        </section>
+    </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
