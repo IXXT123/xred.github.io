@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* 头部样式 */
+        header {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .bio {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* 社交链接 */
+        .social-links {
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            color: #333;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-link:hover {
+            color: #007bff;
+        }
+
+        /* 项目展示 */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: #f1f1f1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="your-avatar.jpg" alt="头像" class="avatar">
+            <h1>你的名字</h1>
+            <p class="bio">
+                这里写个人简介，可以包括你的专业、研究方向、兴趣爱好等。
+                保持简洁明了，2-3句话为宜。
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:your.email@example.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://zhihu.com/people/yourid" class="social-link">
+                    <i class="fab fa-zhihu"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="projects">
+            <div class="project-card">
+                <img src="project1.jpg" alt="项目1" class="project-image">
+                <h3>项目名称1</h3>
+                <p>项目简要描述，说明项目的主要功能和你的贡献。</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">机器学习</span>
+                    <span class="tag">数据分析</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="project2.jpg" alt="项目2" class="project-image">
+                <h3>项目名称2</h3>
+                <p>项目简要描述，说明项目的主要功能和你的贡献。</p>
+                <div class="project-tags">
+                    <span class="tag">Web开发</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Vue.js</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 你的名字. All rights reserved.</p>
+    </footer>
+</body>
+</html>
